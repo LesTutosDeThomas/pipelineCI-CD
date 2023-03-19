@@ -14,7 +14,10 @@
 
 ### instal docker, docker-compose on alpine
 ```
-apk add docker docker-compose --repository http://dl-cdn.alpinelinux.org/alpine/latest-stable/community
+apk add docker docker-compose docker-cli docker-cli-compose --repository http://dl-cdn.alpinelinux.org/alpine/latest-stable/community
+apk add python3
+python3 -m ensurepip
+pip install docker-compose
 apk add vim
 rc-update add docker
 mkdir /training-pipeline-gitlab
